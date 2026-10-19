@@ -1,0 +1,104 @@
+admin@admins-MBP ~ % diskutil list
+/dev/disk0 (internal, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *251.0 GB   disk0
+   1:                        EFI ⁨EFI⁩                     314.6 MB   disk0s1
+   2:                 Apple_APFS ⁨Container disk1⁩         250.6 GB   disk0s2
+
+/dev/disk1 (synthesized):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      APFS Container Scheme -                      +250.6 GB   disk1
+                                 Physical Store disk0s2
+   1:                APFS Volume ⁨SSD - Data⁩              32.8 GB    disk1s1
+   2:                APFS Volume ⁨Preboot⁩                 302.0 MB   disk1s2
+   3:                APFS Volume ⁨Recovery⁩                1.1 GB     disk1s3
+   4:                APFS Volume ⁨VM⁩                      5.4 GB     disk1s4
+   5:                APFS Volume ⁨SSD⁩                     15.4 GB    disk1s5
+   6:              APFS Snapshot ⁨com.apple.os.update-...⁩ 15.4 GB    disk1s5s1
+
+/dev/disk2 (disk image):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        +194.7 MB   disk2
+   1:                 Apple_APFS ⁨Container disk3⁩         194.7 MB   disk2s1
+
+/dev/disk3 (synthesized):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      APFS Container Scheme -                      +194.7 MB   disk3
+                                 Physical Store disk2s1
+   1:                APFS Volume ⁨VirtualBox⁩              149.7 MB   disk3s1
+
+/dev/disk4 (disk image):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        +2.9 GB     disk4
+   1:       Microsoft Basic Data ⁨⁩                        2.9 GB     disk4s1
+   2:                        EFI ⁨ESP⁩                     5.3 MB     disk4s2
+   3:       Microsoft Basic Data ⁨⁩                        307.2 KB   disk4s3
+
+/dev/disk5 (disk image):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:     Apple_partition_scheme                        +757.7 MB   disk5
+   1:        Apple_partition_map ⁨⁩                        32.3 KB    disk5s1
+   2:                  Apple_HFS ⁨Google Chrome⁩           757.7 MB   disk5s2
+                    (free space)                         1.9 TB     -
+
+/dev/disk6 (disk image):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:     Apple_partition_scheme                        +574.7 MB   disk6
+   1:        Apple_partition_map ⁨⁩                        32.3 KB    disk6s1
+   2:         Apple_Driver_ATAPI ⁨⁩                        4.1 KB     disk6s2
+   3:                 Apple_HFSX ⁨Firefox⁩                 574.6 MB   disk6s3
+
+/dev/disk7 (disk image):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:     Apple_partition_scheme                        +969.1 MB   disk7
+   1:        Apple_partition_map ⁨⁩                        32.3 KB    disk7s1
+   2:                  Apple_HFS ⁨Microsoft Edge⁩          969.1 MB   disk7s2
+                    (free space)                         1.3 TB     -
+
+admin@admins-MBP ~ % 
+
+admin@admins-MacBook-Pro ~ % diskutil info disk0
+   Device Identifier:         disk0
+   Device Node:               /dev/disk0
+   Whole:                     Yes
+   Part of Whole:             disk0
+   Device / Media Name:       APPLE SSD AP0256J
+
+   Volume Name:               Not applicable (no file system)
+   Mounted:                   Not applicable (no file system)
+   File System:               None
+
+   Content (IOContent):       GUID_partition_scheme
+   OS Can Be Installed:       No
+   Media Type:                Generic
+   Protocol:                  PCI-Express
+   SMART Status:              Verified
+
+   Disk Size:                 251.0 GB (251000193024 Bytes) (exactly 490234752 512-Byte-Units)
+   Device Block Size:         4096 Bytes
+
+   Media OS Use Only:         No
+   Media Read-Only:           No
+   Volume Read-Only:          Not applicable (no file system)
+
+   Device Location:           Internal
+   Removable Media:           Fixed
+
+   Solid State:               Yes
+   Virtual:                   No
+   Hardware AES Support:      No
+
+admin@admins-MacBook-Pro ~ % df -h
+Filesystem       Size   Used  Avail Capacity iused      ifree %iused  Mounted on
+/dev/disk1s5s1  233Gi   14Gi  182Gi     8%  502388 1907758120    0%   /
+devfs           210Ki  210Ki    0Bi   100%     728          0  100%   /dev
+/dev/disk1s4    233Gi  5.0Gi  182Gi     3%       6 1907758120    0%   /System/Volumes/VM
+/dev/disk1s2    233Gi  288Mi  182Gi     1%    1111 1907758120    0%   /System/Volumes/Preboot
+/dev/disk1s6    233Gi  588Ki  182Gi     1%      17 1907758120    0%   /System/Volumes/Update
+/dev/disk1s1    233Gi   31Gi  182Gi    15%  226886 1907758120    0%   /System/Volumes/Data
+map auto_home     0Bi    0Bi    0Bi   100%       0          0  100%   /System/Volumes/Data/home
+/dev/disk3s1    186Mi  143Mi   42Mi    78%       8     425400    0%   /Volumes/VirtualBox
+/dev/disk5s2    723Mi  723Mi    0Bi   100%     746 4294966533    0%   /Volumes/Google Chrome
+/dev/disk6s3    548Mi  538Mi   10Mi    99%     168 4294967111    0%   /Volumes/Firefox
+/dev/disk7s2    924Mi  924Mi    0Bi   100%    1036 4294966243    0%   /Volumes/Microsoft Edge
+admin@admins-MacBook-Pro ~ % 
