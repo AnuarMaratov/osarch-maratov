@@ -1,0 +1,27 @@
+admin@admins-MBP ~ % system_profiler SPMemoryDataType
+Memory:
+
+    Memory Slots:
+
+      ECC: Disabled
+      Upgradeable Memory: No
+
+        BANK 0/DIMM0:
+
+          Size: 4 GB
+          Type: LPDDR3
+          Speed: 1867 MHz
+          Status: OK
+          Manufacturer: 0x802C
+          Part Number: 0x4D5435324C3531324D3332443250462D3130
+          Serial Number: -
+
+        BANK 1/DIMM0:
+
+          Size: 4 GB
+          Type: LPDDR3
+          Speed: 1867 MHz
+          Status: OK
+          Manufacturer: 0x802C
+          Part Number: 0x4D5435324C3531324D3332443250462D3130
+          Serial Number: -
