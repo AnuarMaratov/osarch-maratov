@@ -1,0 +1,24 @@
+admin@admins-MacBook-Pro ~ % system_profiler SPHardwareDataType
+Hardware:
+
+    Hardware Overview:
+
+      Model Name: MacBook Pro
+      Model Identifier: MacBookPro13,1
+      Processor Name: Dual-Core Intel Core i5
+      Processor Speed: 2 GHz
+      Number of Processors: 1
+      Total Number of Cores: 2
+      L2 Cache (per Core): 256 KB
+      L3 Cache: 4 MB
+      Hyper-Threading Technology: Enabled
+      Memory: 8 GB
+      SYSTEM FIRMWARE VERSION: 529.120.1.0.0
+      OS Loader Version: 540.120.3~37
+      SMC Version (system): 2.36f102
+      Serial Number (system): C02T217XGVC1
+      Hardware UUID: DA9619DB-15CC-56BC-BAB3-599F6D523239
+      Provisioning UDID: DA9619DB-15CC-56BC-BAB3-599F6D523239
+
+admin@admins-MacBook-Pro ~ % sysctl kern.hv_support
+kern.hv_support: 1
