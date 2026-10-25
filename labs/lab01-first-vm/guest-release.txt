@@ -1,5 +1,5 @@
 $ lsb_release -a
 Distributor ID:	Ubuntu
-Description:	Ubuntu 26.04.01 LTS
-Release:	26.04.01
+Description:	Ubuntu 26.04.1 LTS
+Release:	26.04.1
 Codename:	resolute
