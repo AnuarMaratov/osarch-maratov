@@ -7,7 +7,7 @@ Date: 25.10.2026
 ## What I did
 1. Installed Oracle VirtualBox.
 2. Created VM lab01-ubuntu: 1 vCPU, 2048 MB RAM, 25 GB dynamic disk, NAT[cite: 9].
-3. Installed Ubuntu Server 26.04.1 LTS, took snapshot clean-install[cite: 7, 8].
+3. Installed Ubuntu Server 26.04 LTS, took snapshot clean-install[cite: 7, 8].
 4. Broke it: removed the hostname file using sudo rm /etc/hostname[cite: 8].
 5. Rolled back to clean-install: restored the snapshot in VirtualBox to recover the system[cite: 7].
 
