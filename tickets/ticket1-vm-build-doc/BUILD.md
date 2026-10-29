@@ -1,16 +1,63 @@
 # Test Environment Build Guide
 
-This document outlines the step-by-step process for building the isolated testing environment, complete with the rationale for each technical decision and verification steps.
+Guide written for Aigerim to build, configure, and restore the isolated testing environment for new developers.
 
-| Step | Action | Evidence | Why | Check |
-| :--- | :--- | :--- | :--- | :--- |
-| **1. Installing the hypervisor** | Download and install VirtualBox from virtualbox.org. | ![Install VirtualBox](evidence/01-install-vbox.png) | **Why VirtualBox:** It is a Type-2 hypervisor that is free and legal for office or corporate use, unlike VMware Workstation Pro which may require a paid commercial license. | You should see the VirtualBox Manager shortcut on your desktop and it opens without errors. |
-| **2. Getting the ISO images** | Download the Ubuntu Server 24.04 ISO from ubuntu.com and the Windows 11 Enterprise Evaluation ISO from the Microsoft Evaluation Center. | ![Download ISOs](evidence/02-download-isos.png) | **Why the Evaluation version:** The Windows 11 Enterprise Evaluation is completely free, legal for testing purposes, and works out of the box for 90 days without needing a purchased license key. | You should have two `.iso` files in your Downloads folder, each sized several gigabytes. |
-| **3. Creating the Windows 11 VM** | In VirtualBox, click "New", name it "Win11_Test", allocate 4096 MB of RAM, 2 CPUs, a 50 GB dynamically allocated disk, and check the "Enable EFI" box (TPM 2.0 is enabled by default in new versions). | ![Windows VM Settings](evidence/03-new-vm-wizard.png) | **Why these settings:** Windows 11 requires a minimum of 4 GB RAM, 2 CPUs, and a TPM 2.0 chip with EFI firmware to boot. A dynamically allocated disk saves your host computer's space by only using as much physical storage as the VM actually fills. | The "Win11_Test" machine appears in the left panel of VirtualBox. |
-| **4. Installing Windows 11** | Start the VM, select the Windows 11 ISO when prompted, and follow the standard "Next" prompts until you reach the desktop. | ![Windows Install](evidence/04-windows-install.png) | **Why this process:** We are doing a clean installation rather than using a pre-built image to ensure the system is completely isolated and free from unnecessary pre-installed corporate software. | You can see the Windows 11 desktop and open the Start menu. |
-| **5. Creating the Ubuntu Server VM** | Click "New", name it "Ubuntu_Test", allocate 2048 MB of RAM, 1 CPU, and a 20 GB dynamically allocated disk. | ![Ubuntu VM Settings](evidence/05-disk-settings.png) | **Why these settings:** Ubuntu Server has no graphical interface, so it needs far fewer resources than Windows. 2 GB of RAM is more than enough for basic developer testing, saving your laptop's memory. | The "Ubuntu_Test" machine is visible in VirtualBox beneath the Windows VM. |
-| **6. Installing Ubuntu Server** | Start the VM, select the Ubuntu ISO, choose English, and leave all default options during the setup wizard (including creating a default user). | ![Ubuntu Install](evidence/06-ubuntu-install.png) | **Why default options:** The developer just needs a basic Linux environment. Customizing partitions or installing extra packages now might overcomplicate the setup and break standard configurations. | The system reboots and shows a black terminal screen asking for a "login:". Run `uname -a` and `lsb_release -a` to verify. |
-| **7. Networking** | In the VM settings for both machines, under Network Adapter, choose NAT Network (you may need to create one in VirtualBox Tools -> Network first). | ![Network Settings](evidence/07-network-adapter.png) | **Why NAT Network:** Standard NAT allows internet access but isolates the VMs from each other. "NAT Network" acts like a virtual router: it gives both VMs internet access AND puts them on the same local subnet so they can communicate, without exposing them to the company's main network. | Run `ip addr` inside Linux and `ipconfig` inside Windows. Both should have similar IP addresses (e.g., 10.0.2.x). |
-| **8. Verifying the connection** | Open the command line in both operating systems and ping each other, as well as an external website like google.com. | ![Ping Check](evidence/08-ping-check.png) | **Why ping:** Ping sends tiny packets of data to another machine to prove that network traffic can successfully travel back and forth. | You see replies with time in milliseconds, with no "Request timed out" errors. |
-| **9. Taking a clean snapshot** | Turn off both VMs, right-click each in VirtualBox, go to Snapshots, and click "Take". Name it "Clean Install". | ![Snapshot List](evidence/09-snapshot-list.png) | **Why a snapshot:** The developer asked for a machine where he can "try things without breaking anything." A snapshot freezes the VM exactly as it is right now. | When the developer breaks the system, click on the "Clean Install" snapshot and hit "Restore". The VM will instantly revert to this perfect working state. |
-| **10. What to do if something goes wrong** | **Problem:** The VM freezes, turns completely black, or the host laptop becomes extremely slow.<br><br>**Solution:** Do not press the laptop's physical power button. Right-click the frozen VM in VirtualBox, select "Close", and click "Power off the machine". | ![Force Power Off](evidence/10-force-power-off.png) | **Why this happens:** This usually means the VM consumed all available resources on the host laptop. Hard-resetting the VM from the menu forces it to stop and frees up your laptop's RAM instantly. | The system immediately frees up resources and the laptop unfreezes. |
+## Step 1. Installing the hypervisor
+Download and install VirtualBox from virtualbox.org.
+![](screenshots/step1.png)
+Why VirtualBox: It is an open-source Type-2 hypervisor that is free and legal for corporate office use without requiring a paid commercial license.
+> Check: You can see the VirtualBox Manager shortcut on your desktop and it launches without errors.
+
+## Step 2. Downloading the OS ISO images
+Download the Ubuntu Server 24.04 LTS ISO from ubuntu.com and the Windows 11 Enterprise Evaluation ISO from the Microsoft Evaluation Center.
+![](screenshots/step2.png)
+Why Evaluation and LTS: Ubuntu LTS provides long-term stability at zero cost. Windows 11 Enterprise Evaluation is completely free, legal for testing, and works out of the box for 90 days without purchasing a commercial license key.
+> Check: You should have two `.iso` files in your Downloads folder, each sized several gigabytes.
+
+## Step 3. Creating the Windows 11 VM
+In VirtualBox, click "New", name it "Win11_Test", allocate 4096 MB RAM, 2 CPUs, a 50 GB dynamically allocated disk, and check "Enable EFI".
+![](evidence/01-new-vm-wizard.png)
+Why these settings: Windows 11 requires a minimum of 4 GB RAM, 2 CPUs, and EFI firmware with TPM 2.0 to boot. A dynamically allocated disk saves your host computer's storage by only growing as files are created inside the VM.
+> Check: The "Win11_Test" machine appears in the left panel of VirtualBox.
+
+## Step 4. Creating the Ubuntu Server VM
+Click "New", name it "Ubuntu_Test", allocate 2048 MB RAM, 1 CPU, and a 20 GB dynamically allocated disk.
+![](evidence/02-disk-settings.png)
+Why these settings: Ubuntu Server has no graphical interface (CLI only), so 2 GB of RAM is more than enough for developer testing while preserving your laptop's host memory.
+> Check: The "Ubuntu_Test" machine appears in the left panel beneath Windows.
+
+## Step 5. Installing the operating systems
+Start each VM, select the corresponding ISO file when prompted, and complete the installation wizard using standard default settings.
+![](screenshots/step5.png)
+Why default options: Keeping the default package selection and partitioning avoids misconfigurations and ensures a clean, isolated development environment.
+> Check: Windows boots to the desktop, and Ubuntu reboots to a black terminal screen asking for a "login:".
+
+## Step 6. Configuring the network adapter
+In the VM settings for both machines, under Network Adapter, choose **NAT Network** (or NAT).
+![](evidence/03-network-adapter.png)
+Why NAT and not Bridged: The Innotech teaching network filters by MAC address, and a bridged adapter gives the guest its own MAC, which the network will not accept. Behind NAT the guest goes out using the host's address and the problem disappears. NAT Network also places both VMs on the same local subnet so they can communicate with each other.
+> Check: Run `ip addr` inside Ubuntu and `ipconfig` inside Windows. Both receive local IP addresses (e.g., 10.0.2.x).
+
+## Step 7. Verifying Windows network connectivity
+Open Command Prompt in Windows and run `ping google.com` as well as `ping <Ubuntu-IP>`.
+![](evidence/04-windows-ping.png)
+Why ping: Ping sends ICMP echo packets to prove that external internet routing and internal guest-to-guest network paths are working correctly.
+> Check: You see replies with round-trip times in milliseconds and 0% packet loss.
+
+## Step 8. Verifying Ubuntu network connectivity
+Log into Ubuntu Server and run `ping -c 4 google.com` and `ping -c 4 <Windows-IP>`.
+![](evidence/05-ubuntu-ping.png)
+Why ping: This proves bidirectional communication, confirming the Linux guest can download external packages and reach the Windows test host.
+> Check: The terminal shows "4 packets transmitted, 4 received, 0% packet loss".
+
+## Step 9. Taking a clean baseline snapshot
+Shut down both VMs, navigate to the Snapshots tab for each VM in VirtualBox, and click "Take" with the name "Clean Install".
+![](evidence/06-snapshot-list.png)
+Why snapshots: The developer requested an environment to "try things without breaking anything." A snapshot freezes the VM state so you can instantly restore it whenever the developer breaks the system.
+> Check: The "Clean Install" snapshot appears in the snapshot list, and the "Restore" button is active.
+
+## Step 10. Troubleshooting frozen VMs
+If a VM freezes, turns completely black, or makes your laptop unresponsive, right-click the VM in VirtualBox Manager, choose "Close", and select "Power off the machine".
+![](screenshots/step10.png)
+Why this solution: Do not press your laptop's physical power button. Forcing the VM to power off terminates only the frozen hypervisor process and immediately frees up your laptop's physical RAM and CPU.
+> Check: Your laptop immediately becomes responsive again, and you can restart the VM or restore the "Clean Install" snapshot.
