@@ -31,9 +31,9 @@
 
 | Metric | Before | After |
 | :--- | :---: | :---: |
-| **Host RAM in use** | <value> | <value> |
-| **Available** | <value> | <value> |
-| **Committed / Swap used** | <value> | <value> |
+| **Host RAM in use** | <4.44> | <5.41> |
+| **Available** | <3.56> | <2.59> |
+
 
 **What I noticed:**  
 <Brief observation describing memory pressure, host responsiveness, or swapping behavior during overcommitment.>
