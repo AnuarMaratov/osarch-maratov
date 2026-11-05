@@ -1,1 +1,68 @@
+admin@admins-MacBook-Pro ~ % sysctl -n machdep.cpu.brand_string
+Intel(R) Core(TM) i5-6360U CPU @ 2.00GHz
+admin@admins-MacBook-Pro ~ % sysctl hw.physicalcpu hw.logicalcpu hw.memsize
+hw.physicalcpu: 2
+hw.logicalcpu: 4
+hw.memsize: 8589934592
+admin@admins-MacBook-Pro ~ % system_profiler SPMemoryDataType
+Memory:
 
+    Memory Slots:
+
+      ECC: Disabled
+      Upgradeable Memory: No
+
+        BANK 0/DIMM0:
+
+          Size: 4 GB
+          Type: LPDDR3
+          Speed: 1867 MHz
+          Status: OK
+          Manufacturer: 0x802C
+          Part Number: 0x4D5435324C3531324D3332443250462D3130
+          Serial Number: -
+
+        BANK 1/DIMM0:
+
+          Size: 4 GB
+          Type: LPDDR3
+          Speed: 1867 MHz
+          Status: OK
+          Manufacturer: 0x802C
+          Part Number: 0x4D5435324C3531324D3332443250462D3130
+          Serial Number: -
+
+admin@admins-MacBook-Pro ~ % diskutil info disk0
+   Device Identifier:         disk0
+   Device Node:               /dev/disk0
+   Whole:                     Yes
+   Part of Whole:             disk0
+   Device / Media Name:       APPLE SSD AP0256J
+
+   Volume Name:               Not applicable (no file system)
+   Mounted:                   Not applicable (no file system)
+   File System:               None
+
+   Content (IOContent):       GUID_partition_scheme
+   OS Can Be Installed:       No
+   Media Type:                Generic
+   Protocol:                  PCI-Express
+   SMART Status:              Verified
+
+   Disk Size:                 251.0 GB (251000193024 Bytes) (exactly 490234752 512-Byte-Units)
+   Device Block Size:         4096 Bytes
+
+   Media OS Use Only:         No
+   Media Read-Only:           No
+   Volume Read-Only:          Not applicable (no file system)
+
+   Device Location:           Internal
+   Removable Media:           Fixed
+
+   Solid State:               Yes
+   Virtual:                   No
+   Hardware AES Support:      No
+
+admin@admins-MacBook-Pro ~ % uname -m
+x86_64
+admin@admins-MacBook-Pro ~ % 
