@@ -56,7 +56,7 @@ I gave the guest 2 vCPU of 4 threads, 2 GB of 8 GB RAM and a 25 GB dynamically a
 - **CPU:** 2 vCPU leave two of four threads for the host and, in Lab 2, the second guest.  
 - **Disk:** the 25 GB disk is dynamic, so it only takes the space actually written. But 25 GB is close to the 20 GB free on Macintosh HD. If the guest ever filled its disk, the host would run out of space first. That is a deliberate overcommitment I have to watch.
 
-Consequence for Lab 2: a Windows 11 guest with 4 GB RAM and a 64 GB disk does not fit this host as it stands. Before Lab 2 I need to clean up storage and lower the Linux guest's memory.
+
 
 ## Result
 
