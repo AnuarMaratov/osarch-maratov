@@ -1,1 +1,69 @@
+maratov@lab01-maratov:~$lscpu
+CPU op-mode(s):          32-bit, 64-bit
+Address sizes:           39 bits physical, 48 bits virtual
+Byte Order:              Little Endian
+CPU(s):                  1
+On-line CPU(s) list:     0
+Vendor ID:               GenuineIntel
+Model name:              Intel(R) Core(TM) i5-6360U CPU @ 2.00GHz
+CPU family:              6
+Model:                   78
+Thread(s) per core:      1
+Core(s) per socket:      1
+Socket(s):               1
+Stepping:                3
+BogoMIPS:                4000.30
+Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon rep_good nopl xtopology nonstop_tsc cpuid tsc_known_good aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch pti fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdt_a rdseed adx smap clflushopt clwb avx_vnni md_clear flush_l1d arch_capabilities
 
+Virtualization features:
+Hypervisor vendor:       KVM
+Virtualization type:     full
+
+Caches (sum of all):     
+L1d:                     32 KiB (1 instance)
+L1i:                     32 KiB (1 instance)
+L2:                      256 KiB (1 instance)
+L3:                      4 MB (1 instance)
+
+NUMA:                    
+NUMA node(s):            1
+NUMA node0 CPU(s):       0
+
+Vulnerabilities:
+Gather data sampling:    Unknown: Dependent on hypervisor status
+Ghostwrite:              Not affected
+Indirect target selection: Mitigation: Aligned branch/return thunks
+Itlb multihit:           KVM: Mitigation: VMX unsupported
+L1tf:                    Mitigation: PTE Inversion
+Mds:                     Mitigation: Clear CPU buffers; SMT Host state unknown
+Meltdown:                Mitigation: PTI
+Mmio stale data:         Mitigation: Clear CPU buffers; SMT Host state unknown
+Old microcode:           Not affected
+Reg file data sampling:  Not affected
+Retbleed:                Vulnerable
+Spec rstack overflow:    Not affected
+Spec store bypass:       Vulnerable
+Speculative store bypass: Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+Spectre v1:              Mitigation: Retpolines; STIBP disabled; RSB filling; PRSB-EIBRS Not affected; BHI Retpoline
+Spectre v2:              Mitigation: Retpolines; STIBP disabled; RSB filling; PRSB-EIBRS Not affected; BHI Retpoline
+Srbds:                   Unknown: Dependent on hypervisor status
+Tsa:                     Not affected
+Tsx async abort:         Not affected
+Vmscape:                 Not affected
+
+maratov@lab01-maratov:~$free -h
+total        used        free      shared  buff/cache   available
+Mem:          1.6Gi       326Mi       1.1Gi       1.0Mi       324Mi       1.3Gi
+Swap:         2.0Gi          0B       2.0Gi
+
+maratov@lab01-maratov:~$sudo dmidecode -t memory
+# dmidecode 3.6
+Getting SMBIOS data from sysfs.
+SMBIOS 2.5 present.
+
+maratov@lab01-maratov:~$df -h /
+Filesystem                         Size  Used Avail Use% Mounted on
+/dev/mapper/ubuntu--vg-ubuntu--lv  12G   5.5G  5.2G   52%  /
+
+maratov@lab01-maratov:~$uname -m
+x86_64
