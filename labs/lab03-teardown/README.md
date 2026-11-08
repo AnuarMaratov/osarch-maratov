@@ -9,43 +9,43 @@
 
 ### AMD Ryzen 5 7600
 - **Caption:** Desktop boxed processor with 6 cores, 12 threads, base clock 3.8 GHz, max boost up to 5.1 GHz (Zen 4 architecture). Connects to AM5 socket on the motherboard. Limited by AM5 socket motherboards and DDR5 memory generation. — Source: [AMD Official Specs](https://www.amd.com)  
-- ![AMD Ryzen 5 7600](evidence/photos/ryzen5-7600.png)
+- ![AMD Ryzen 5 7600]
 
 ### Intel Core i5-13400
 - **Caption:** Desktop processor with 10 cores (6 Performance-cores, 4 Efficient-cores), 16 threads, max turbo frequency up to 4.60 GHz. Connects to LGA 1700 socket on the motherboard. Limited by LGA 1700 motherboards and DDR4/DDR5 memory support. — Source: [Intel Official Specs](https://www.intel.com)  
-- ![Intel Core i5-13400](evidence/photos/intel-i5-13400.png)
+- ![Intel Core i5-13400]
 
 ### ASUS PRIME B650M-A
 - **Caption:** Micro-ATX motherboard featuring the AMD B650 chipset, AM5 socket, and 4x DDR5 memory slots supporting up to DDR5 memory generation. Connects to AM5 processors, DDR5 modules, PCIe 4.0/5.0 M.2 SSDs, and power supply. Limited by AM5 processors and DDR5 memory type. — Source: [ASUS Official Specs](https://www.asus.com)  
-- ![ASUS PRIME B650M-A](evidence/photos/asus-b650m-a.png)
+- ![ASUS PRIME B650M-A]
 
 ### MSI PRO B760M-A WIFI DDR4
 - **Caption:** Micro-ATX motherboard featuring the Intel B760 chipset, LGA 1700 socket, and 4x DDR4 memory slots supporting up to DDR4 memory generation. Connects to 12th/13th/14th Gen Intel processors, DDR4 DIMM memory, M.2 SSDs, and PCIe components. Limited by LGA 1700 processors and DDR4 memory type. — Source: [MSI Official Specs](https://www.msi.com)  
-- ![MSI PRO B760M-A WIFI DDR4](evidence/photos/msi-b760m-a-wifi-ddr4.png)
+- ![MSI PRO B760M-A WIFI DDR4]
 
 ### Kingston FURY Beast DDR5-5600, 16 GB
 - **Caption:** 16 GB DDR5 SDRAM memory module operating at 5600 MT/s with CL36 latency (288-pin DIMM). Connects to desktop motherboard DDR5 memory slots (one per memory channel). Limited by DDR5 motherboard slots; physically incompatible with DDR4 slots due to notch position. — Source: [Kingston Official Specs](https://www.kingston.com)  
-- ![Kingston FURY Beast DDR5](evidence/photos/kingston-fury-ddr5-5600.png)
+- ![Kingston FURY Beast DDR5]
 
 ### Crucial DDR4-3200, 16 GB DIMM
 - **Caption:** 16 GB DDR4 SDRAM memory module operating at 3200 MT/s (DIMM form factor). Connects to desktop motherboard DDR4 memory slots. Limited by DDR4 motherboard memory slots and DDR4 memory generation. — Source: [Technodom Store Specs](https://www.technodom.kz)  
-- ![Crucial DDR4-3200](evidence/photos/crucial-ddr4-3200.png)
+- ![Crucial DDR4-3200]
 
 ### Samsung 990 PRO 1 TB SSD
 - **Caption:** High-performance internal solid-state drive with M.2 2280 form factor, utilizing PCIe Gen 4.0 x4 interface with sequential read speeds up to 7,450 MB/s. Connects to an M.2 NVMe PCIe slot on the motherboard. Limited by PCIe 4.0/5.0 M.2 slots and motherboard interface bandwidth. — Source: [Samsung Semiconductor](https://download.semiconductor.samsung.com)  
-- ![Samsung 990 PRO 1 TB](evidence/photos/samsung-990pro-1tb.png)
+- ![Samsung 990 PRO 1 TB]
 
 ### Samsung 870 EVO 1 TB SSD
 - **Caption:** 2.5-inch SATA III solid-state drive with sequential read speeds up to 560 MB/s. Connects via a SATA 6Gb/s data cable to a motherboard SATA port and a power supply SATA power cable. Limited by the SATA 3.0 bus speed (~550 MB/s max). — Source: [Samsung Official Specs](https://www.samsung.com)  
-- ![Samsung 870 EVO 1 TB](evidence/photos/samsung-870evo-1tb.png)
+- ![Samsung 870 EVO 1 TB]
 
 ### Corsair RM750e (750 W)
 - **Caption:** 750W fully modular power supply unit providing electrical power with 80 PLUS efficiency rating. Connects to the motherboard (24-pin and CPU 8-pin), graphics card, and storage drives via modular power cables. Limited by total wattage output (750W) and available power connectors. — Source: [Corsair Official Specs](https://www.corsair.com)  
-- ![Corsair RM750e](evidence/photos/corsair-rm750e.png)
+- ![Corsair RM750e]
 
 ### Stock Cooler
 - **Caption:** Standard stock CPU air cooler designed to remove processor thermal energy. Connects directly to the CPU socket area and motherboard fan headers. Limited by the processor socket type and maximum thermal design power (TDP dissipation capacity in Watts). — Source: [Maker's Site / Documentation](https://www.amd.com)  
-- ![Stock Cooler](evidence/photos/stock-cooler.png)
+- ![Stock Cooler]
 
 ---
 
