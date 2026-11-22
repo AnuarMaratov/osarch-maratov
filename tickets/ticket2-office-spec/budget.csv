@@ -1,0 +1,43 @@
+role,component,model,price_kzt,source,date
+Accountant,CPU,"AMD Ryzen 5 7600X OEM (AM5, 6C/12T, iGPU)",94200,shop.kz https://shop.kz/search/?q=Ryzen+5+7600X (list: https://shop.kz/offers/protsessory/ryzen-5/),2026-11-22
+Accountant,Motherboard,"MSI PRO B650M-P (mATX, AM5, 4xDDR5)",61990,shop.kz https://shop.kz/search/?q=MSI+PRO+B650M-P,2026-11-22
+Accountant,RAM,Kingston Fury Beast DDR5-5600 16GB (1x16) KF556C36BBE-16,164990,shop.kz https://shop.kz/search/?q=Kingston+Fury+Beast+DDR5+16GB,2026-11-22
+Accountant,SSD,Kingston NV3 1TB M.2 NVMe PCIe 4.0,85990,shop.kz https://shop.kz/search/?q=Kingston+NV3+1TB,2026-11-22
+Accountant,PSU,MSI MAG A550BN 550W 80+ Bronze,22590,shop.kz https://shop.kz/search/?q=MSI+MAG+A550BN,2026-11-22
+Accountant,Case,"DeepCool CC560 V2 Black (ATX mid-tower, no PSU)",28990,shop.kz https://shop.kz/search/?q=Deepcool+CC560+V2,2026-11-22
+Accountant,Cooler,DeepCool AG400 (AM5 tower cooler),10990,shop.kz https://shop.kz/search/?q=DeepCool+AG400,2026-11-22
+Accountant,Monitor,Philips 24E1N1100A/01 23.8in 120Hz,42590,shop.kz https://shop.kz/search/?q=%D0%9C%D0%BE%D0%BD%D0%B8%D1%82%D0%BE%D1%80+23.8+IPS+100Hz,2026-11-22
+Accountant,OS,"Windows 11 Professional 64-bit USB (BOX, retail)",123990,shop.kz https://shop.kz/search/?q=Windows+11+Professional,2026-11-22
+Accountant,TOTAL,,636320,,2026-11-22
+Sales manager,CPU,"AMD Ryzen 5 7600X OEM (AM5, 6C/12T, iGPU)",94200,shop.kz https://shop.kz/search/?q=Ryzen+5+7600X (list: https://shop.kz/offers/protsessory/ryzen-5/),2026-11-22
+Sales manager,Motherboard,"MSI PRO B650M-P (mATX, AM5, 4xDDR5)",61990,shop.kz https://shop.kz/search/?q=MSI+PRO+B650M-P,2026-11-22
+Sales manager,RAM,Kingston Fury Beast DDR5-5600 16GB (1x16) KF556C36BBE-16,164990,shop.kz https://shop.kz/search/?q=Kingston+Fury+Beast+DDR5+16GB,2026-11-22
+Sales manager,SSD,Kingston NV3 1TB M.2 NVMe PCIe 4.0,85990,shop.kz https://shop.kz/search/?q=Kingston+NV3+1TB,2026-11-22
+Sales manager,PSU,MSI MAG A550BN 550W 80+ Bronze,22590,shop.kz https://shop.kz/search/?q=MSI+MAG+A550BN,2026-11-22
+Sales manager,Case,"DeepCool CC560 V2 Black (ATX mid-tower, no PSU)",28990,shop.kz https://shop.kz/search/?q=Deepcool+CC560+V2,2026-11-22
+Sales manager,Cooler,DeepCool AG400 (AM5 tower cooler),10990,shop.kz https://shop.kz/search/?q=DeepCool+AG400,2026-11-22
+Sales manager,Monitor,Philips 24E1N1100A/01 23.8in 120Hz,42590,shop.kz https://shop.kz/search/?q=%D0%9C%D0%BE%D0%BD%D0%B8%D1%82%D0%BE%D1%80+23.8+IPS+100Hz,2026-11-22
+Sales manager,OS,"Windows 11 Professional 64-bit USB (BOX, retail)",123990,shop.kz https://shop.kz/search/?q=Windows+11+Professional,2026-11-22
+Sales manager,TOTAL,,636320,,2026-11-22
+Web developer,CPU,"AMD Ryzen 7 7700 OEM (AM5, 8C/16T, iGPU)",100990,shop.kz https://shop.kz/search/?q=Ryzen+7+7700,2026-11-22
+Web developer,Motherboard,"MSI PRO B650M-P (mATX, AM5, 4xDDR5)",61990,shop.kz https://shop.kz/search/?q=MSI+PRO+B650M-P,2026-11-22
+Web developer,RAM,Kingston Fury Beast DDR5-5200 32GB (2x16) KF552C40BBK2-32,332990,shop.kz https://shop.kz/search/?q=Kingston+Fury+Beast+DDR5+32GB,2026-11-22
+Web developer,SSD,Kingston NV3 1TB M.2 NVMe PCIe 4.0,85990,shop.kz https://shop.kz/search/?q=Kingston+NV3+1TB,2026-11-22
+Web developer,PSU,MSI MAG A550BN 550W 80+ Bronze,22590,shop.kz https://shop.kz/search/?q=MSI+MAG+A550BN,2026-11-22
+Web developer,Case,"DeepCool CC560 V2 Black (ATX mid-tower, no PSU)",28990,shop.kz https://shop.kz/search/?q=Deepcool+CC560+V2,2026-11-22
+Web developer,Cooler,DeepCool AG400 (AM5 tower cooler),10990,shop.kz https://shop.kz/search/?q=DeepCool+AG400,2026-11-22
+Web developer,Monitor,Xiaomi A27Qi 2026 27in QHD,84990,shop.kz https://shop.kz/search/?q=%D0%9C%D0%BE%D0%BD%D0%B8%D1%82%D0%BE%D1%80+27+IPS+2560x1440,2026-11-22
+Web developer,OS,Ubuntu Desktop LTS (free),0,ubuntu.com,2026-11-22
+Web developer,TOTAL,,729520,,2026-11-22
+Designer,CPU,"AMD Ryzen 7 7700 OEM (AM5, 8C/16T, iGPU)",100990,shop.kz https://shop.kz/search/?q=Ryzen+7+7700,2026-11-22
+Designer,Motherboard,"MSI PRO B650M-P (mATX, AM5, 4xDDR5)",61990,shop.kz https://shop.kz/search/?q=MSI+PRO+B650M-P,2026-11-22
+Designer,RAM,Kingston Fury Beast DDR5-5200 32GB (2x16) KF552C40BBK2-32,332990,shop.kz https://shop.kz/search/?q=Kingston+Fury+Beast+DDR5+32GB,2026-11-22
+Designer,SSD,Kingston NV3 1TB M.2 NVMe PCIe 4.0,85990,shop.kz https://shop.kz/search/?q=Kingston+NV3+1TB,2026-11-22
+Designer,PSU,MSI MAG A550BN 550W 80+ Bronze,22590,shop.kz https://shop.kz/search/?q=MSI+MAG+A550BN,2026-11-22
+Designer,Case,"DeepCool CC560 V2 Black (ATX mid-tower, no PSU)",28990,shop.kz https://shop.kz/search/?q=Deepcool+CC560+V2,2026-11-22
+Designer,Cooler,DeepCool AG400 (AM5 tower cooler),10990,shop.kz https://shop.kz/search/?q=DeepCool+AG400,2026-11-22
+Designer,Monitor,iiyama ProLite XUB2797QSN-B2 27in QHD IPS,135490,shop.kz https://shop.kz/search/?q=%D0%9C%D0%BE%D0%BD%D0%B8%D1%82%D0%BE%D1%80+27+IPS+2560x1440,2026-11-22
+Designer,OS,"Windows 11 Professional 64-bit USB (BOX, retail)",123990,shop.kz https://shop.kz/search/?q=Windows+11+Professional,2026-11-22
+Designer,TOTAL,,904010,,2026-11-22
+ALL,GRAND TOTAL,,2906170,limit 3000000,2026-11-22
+ALL,RESERVE,,93830,3000000 - grand total,2026-11-22
