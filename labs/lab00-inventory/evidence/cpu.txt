@@ -1,0 +1,13 @@
+$ sysctl -a | grep machdep.cpu
+machdep.cpu.cores_per_package: 10
+machdep.cpu.core_count: 10
+machdep.cpu.logical_per_package: 10
+machdep.cpu.thread_count: 10
+machdep.cpu.brand_string: Apple M5
+
+$ sysctl hw.ncpu hw.physicalcpu hw.logicalcpu hw.perflevel0.physicalcpu hw.perflevel1.physicalcpu
+hw.ncpu: 10
+hw.physicalcpu: 10
+hw.logicalcpu: 10
+hw.perflevel0.physicalcpu: 4
+hw.perflevel1.physicalcpu: 6

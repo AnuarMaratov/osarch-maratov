@@ -1,0 +1,111 @@
+$ diskutil list
+/dev/disk0 (internal, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *500.3 GB   disk0
+   1:             Apple_APFS_ISC Container disk1         576.7 MB   disk0s1
+   2:                 Apple_APFS Container disk3         494.3 GB   disk0s2
+   3:        Apple_APFS_Recovery Container disk2         5.4 GB     disk0s3
+
+/dev/disk3 (synthesized):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      APFS Container Scheme -                      +494.3 GB   disk3
+                                 Physical Store disk0s2
+   1:                APFS Volume Macintosh HD            16.6 GB    disk3s1
+   2:              APFS Snapshot com.apple.os.update-... 16.6 GB    disk3s1s1
+   3:                APFS Volume Preboot                 15.4 GB    disk3s2
+   4:                APFS Volume Recovery                3.3 GB     disk3s3
+   5:                APFS Volume Data                    82.2 GB    disk3s5
+   6:                APFS Volume VM                      1.1 GB     disk3s6
+
+/dev/disk4 (disk image):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        +1.5 GB     disk4
+   1:                  Apple_HFS Claude                  1.4 GB     disk4s1
+
+/dev/disk5 (disk image):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        +1.3 GB     disk5
+   1:                  Apple_HFS VS Code                 1.2 GB     disk5s1
+
+/dev/disk6 (disk image):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        +1.2 GB     disk6
+   1:                  Apple_HFS VMware Fusion           1.1 GB     disk6s1
+
+/dev/disk7 (disk image):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        +4.3 GB     disk7
+   1:                        EFI EFI                     209.7 MB   disk7s1
+   2:                  Apple_HFS Gemini 1.144.4.1467     4.0 GB     disk7s2
+
+
+$ diskutil info disk0
+   Device Identifier:         disk0
+   Device Node:               /dev/disk0
+   Whole:                     Yes
+   Part of Whole:             disk0
+   Device / Media Name:       APPLE SSD AP0512Z
+
+   Volume Name:               Not applicable (no file system)
+   Mounted:                   Not applicable (no file system)
+   File System:               None
+
+   Content (IOContent):       GUID_partition_scheme
+   OS Can Be Installed:       No
+   Media Type:                Общий
+   Protocol:                  Apple Fabric
+   SMART Status:              Verified
+
+   Disk Size:                 500.3 GB (500277792768 Bytes) (exactly 977105064 512-Byte-Units)
+   Device Block Size:         4096 Bytes
+
+   Media OS Use Only:         No
+   Media Read-Only:           No
+   Volume Read-Only:          Not applicable (no file system)
+
+   Device Location:           Internal
+   Removable Media:           Fixed
+
+   Solid State:               Yes
+   Hardware AES Support:      Yes
+
+
+$ system_profiler SPNVMeDataType
+NVMExpress:
+
+    Apple SSD Controller:
+
+        APPLE SSD AP0512Z:
+
+          Capacity: 500,28 GB (500 277 792 768 bytes)
+          TRIM Support: Yes
+          Model: APPLE SSD AP0512Z
+          Revision: 2 973,120
+          Serial Number: 07f089661a7ba02e
+          Detachable Drive: No
+          BSD Name: disk0
+          Partition Map Type: GPT (GUID Partition Table)
+          Removable Media: No
+          S.M.A.R.T. status: Verified
+          Volumes:
+            iSCPreboot:
+              Capacity: 576,7 MB (576 716 800 bytes)
+              BSD Name: disk0s1
+              Content: Apple_APFS_ISC
+            Macintosh HD:
+              Capacity: 494,33 GB (494 332 366 848 bytes)
+              BSD Name: disk0s2
+              Content: Apple_APFS
+            Recovery:
+              Capacity: 5,37 GB (5 368 664 064 bytes)
+              BSD Name: disk0s3
+              Content: Apple_APFS_Recovery
+
+
+$ df -h /
+Filesystem        Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk3s1s1   460Gi    15Gi   349Gi     5%    459k  3.7G    0%   /
+
+$ df -h /System/Volumes/Data
+Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk3s5   460Gi    77Gi   349Gi    19%    531k  3.7G    0%   /System/Volumes/Data
