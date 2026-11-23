@@ -39,5 +39,4 @@ printf '\357\273\277' | cat - evidence/.staff-fixed.tmp > evidence/staff-fixed.c
 - I skipped Step 1 of the guide (opening the original in the applications before the diagnosis) and diagnosed from `file` and the bytes only, so I have no screenshots of how the original looks in them.
 - `git push` was rejected (`fetch first`) because the remote had commits that I did not have on this Mac. I ran `git pull --rebase` and pushed again.
 
-## AI use
-I used Claude (Anthropic) to run the diagnosis commands, write `scripts/fix.sh` and draft this README. TODO (Anuar): check the bytes and the BOM / line-ending decision yourself and be ready to explain them in 60 seconds.
+
