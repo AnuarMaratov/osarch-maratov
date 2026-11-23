@@ -1,6 +1,6 @@
 # Lab 4 — Partition, mirror, fail, recover
 
-Pair: Duisenbay Bauyrzhan · Date: 11.16.2026 · Hypervisor: VirtualBox
+Pair: Duisenbay Bauyrzhan with Maratov Anuar · Date: 11.16.2026 · Hypervisor: VirtualBox
 
 ## Windows  
 PS C:\WINDOWS\system32> Get-Disk | Select Number, FriendlyName, PartitionStyle, Size  
@@ -135,3 +135,4 @@ No, RAID 1 does not help in this scenario because file deletion is immediately m
 
 ## What did not work the first time
 I accidently detached the main disk while adding three 1 gb ones, after which I reattached it by assigning correct port to the main disk.
+
